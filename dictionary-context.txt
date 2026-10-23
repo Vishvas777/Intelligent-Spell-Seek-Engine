@@ -1,0 +1,18 @@
+# Vocabulary required to test context-sensitive rules
+how 10
+are 10
+you 10
+dong 2
+doing 20
+their 10
+they're 20
+going 10
+home 10
+house 10
+is 10
+large 10
+this 10
+better 10
+then 10
+than 20
+that 10
