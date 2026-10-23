@@ -1,0 +1,38 @@
+# Expected Test Behavior
+
+A passing test run ends with output similar to:
+
+```text
+Results: N passed, 0 failed.
+```
+
+The exact number of passing tests is printed by the test
+harness and may increase when new assertions are added.
+
+## Behaviors being tested
+
+1. Words are normalized to lowercase.
+2. Curly apostrophes are normalized.
+3. Internal apostrophes are accepted; hyphenated tokens
+   are rejected.
+4. Standard Levenshtein distance handles insertions,
+   deletions, and substitutions.
+5. Adjacent transpositions are handled by the
+   transposition-aware distance function.
+6. Duplicate dictionary words are indexed once, with the
+   highest frequency retained.
+7. Suggestions with equal edit distance are ranked by
+   frequency.
+8. Suggestion output does not exceed five entries.
+9. Context correction can suggest "doing", "they're",
+   and "than" in the tested sentences.
+10. Possessive usage in "Their house is large." should not
+    be changed to "They're house is large."
+
+## When a test fails
+
+Check whether the production code has changed or whether
+the expected behavior is incorrect.
+
+If behavior changes intentionally, update the test assertion
+and this document together with the corresponding code change.
