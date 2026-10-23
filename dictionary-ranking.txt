@@ -1,0 +1,5 @@
+# Equal edit-distance candidates should sort by frequency descending
+cat 2
+bat 20
+hat 10
+dog 1
