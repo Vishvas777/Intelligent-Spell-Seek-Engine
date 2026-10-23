@@ -7,7 +7,7 @@ import java.util.Map;
 
 /**
  * Dependency-free regression tests for Spellseek.java.
- * Requires Java 8 or newer. No JUnit required.
+ * Requires Java 8 or newer. No JUnit required
  */
 public final class SpellseekTest {
     private static int passed;
