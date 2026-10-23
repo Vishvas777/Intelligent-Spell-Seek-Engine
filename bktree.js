@@ -1,4 +1,4 @@
-/* BK-tree and Levenshtein distance for approximate spelling lookup. */
+/* BK-tree and Levenshtein distance for approximate spelling lookup */
 function levenshteinDistance(first, second) {
   if (first === second) return 0;
   if (first.length < second.length) [first, second] = [second, first];
