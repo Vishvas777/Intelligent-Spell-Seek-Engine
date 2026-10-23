@@ -1,0 +1,67 @@
+Loaded dictionary entries from dictionary.txt
+Spellseek is ready. Dictionary size: 36637
+
+========== SPELLSEEK ==========
+1. Check a word
+2. Check and suggest corrections for a sentence
+3. Add a word to the dictionary
+4. Autocomplete a prefix
+5. Show dictionary statistics
+0. Exit
+Choose an option: Enter one word: 'progrmming' is not in the dictionary. Suggestions:
+  1. programming  [edit distance=1, frequency=2224]
+  2. progressing  [edit distance=3, frequency=1071]
+  3. protruding  [edit distance=3, frequency=273]
+  4. reprogramming  [edit distance=3, frequency=196]
+
+========== SPELLSEEK ==========
+1. Check a word
+2. Check and suggest corrections for a sentence
+3. Add a word to the dictionary
+4. Autocomplete a prefix
+5. Show dictionary statistics
+0. Exit
+Choose an option: Enter a sentence: Proposed sentence: I like programming and relieve help
+Review these words before accepting the proposed sentence:
+  recieve -> relieve (options: relieve:1, believe:2, receive:2, relieved:2, recipe:2)
+Note: names and specialist terms may need to be added to the dictionary.
+
+========== SPELLSEEK ==========
+1. Check a word
+2. Check and suggest corrections for a sentence
+3. Add a word to the dictionary
+4. Autocomplete a prefix
+5. Show dictionary statistics
+0. Exit
+Choose an option: Enter a prefix: Autocomplete results:
+  problem (frequency 232325)
+  probably (frequency 202736)
+  promise (frequency 115908)
+  protect (frequency 66508)
+  problems (frequency 60633)
+  proud (frequency 59309)
+  prove (frequency 55079)
+  professor (frequency 52026)
+  promised (frequency 47559)
+  project (frequency 32040)
+
+========== SPELLSEEK ==========
+1. Check a word
+2. Check and suggest corrections for a sentence
+3. Add a word to the dictionary
+4. Autocomplete a prefix
+5. Show dictionary statistics
+0. Exit
+Choose an option: Dictionary words: 36637
+Indexes: HashMap + Trie + BK-tree
+Default maximum edit distance: 1-3, based on input word length
+Ranking: smaller edit distance first, then higher frequency, then alphabetical order
+
+========== SPELLSEEK ==========
+1. Check a word
+2. Check and suggest corrections for a sentence
+3. Add a word to the dictionary
+4. Autocomplete a prefix
+5. Show dictionary statistics
+0. Exit
+Choose an option: Spellseek closed. Thank you!

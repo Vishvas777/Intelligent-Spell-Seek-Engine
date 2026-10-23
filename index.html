@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spellseek - Offline Spell Corrector</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Spellseek Engine</h1>
+      <p>Offline Hybrid Spell Corrector (Trie + BK-Tree + Frequency Ranking)</p>
+    </header>
+
+    <nav class="nav-tabs">
+      <button class="tab-btn active" data-tab="checker-tab">Spell Checker</button>
+      <button class="tab-btn" data-tab="visualizer-tab">Data Structure Visualizer</button>
+      <button class="tab-btn" data-tab="workbench-tab">Dictionary Workbench</button>
+    </nav>
+
+    <!-- TAB 1: SPELL CHECKER -->
+    <main id="checker-tab" class="tab-content active">
+      <div class="grid grid-2">
+        <div class="card">
+          <h2>Input & Query Settings</h2>
+          <div class="form-group">
+            <label for="search-input">Type a word to spell-check / autocomplete:</label>
+            <input type="text" id="search-input" placeholder="e.g., app, algoritm, aplly..." autocomplete="off">
+          </div>
+          <div class="form-group">
+            <label for="max-dist">Max Edit Distance Threshold (BK-Tree):</label>
+            <input type="number" id="max-dist" value="2" min="1" max="5">
+          </div>
+        </div>
+
+        <div class="card">
+          <h2>Ranked Suggestions</h2>
+          <div id="suggestions-container" class="results-box">
+            <p style="color: var(--text-secondary);">Start typing to view corrections...</p>
+          </div>
+        </div>
+      </div>
+      <div class="card sentence-card">
+        <h2>Sentence Spell Checker</h2>
+        <p class="muted helper-text">Enter a full sentence to find possible spelling mistakes and see a suggested correction.</p>
+        <div class="form-group">
+          <label for="sentence-input">Your sentence:</label>
+          <textarea id="sentence-input" rows="4" placeholder="e.g., I recieved teh progrmming assignment."></textarea>
+        </div>
+        <button id="check-sentence-btn" type="button">Check Sentence</button>
+        <div id="sentence-results" class="results-box" aria-live="polite"></div>
+      </div>
+      <div class="card prefix-card">
+        <h2>Prefix Search</h2>
+        <p class="muted helper-text">Enter the beginning of a word below, then click Find Prefix to list matching dictionary words.</p>
+        <div class="form-group">
+          <label for="prefix-input">Word prefix:</label>
+          <div class="inline-controls">
+            <input type="text" id="prefix-input" placeholder="e.g., prog" autocomplete="off" aria-label="Word prefix">
+            <button id="prefix-btn" type="button">Find Prefix</button>
+          </div>
+        </div>
+        <div id="prefix-results" class="results-box" aria-live="polite"><p class="muted">Your prefix matches will appear here.</p></div>
+      </div>
+    </main>
+
+    <!-- TAB 2: VISUALIZER -->
+    <main id="visualizer-tab" class="tab-content">
+      <div class="grid grid-2">
+        <div class="card">
+          <h2>Trie Path Lookup</h2>
+          <pre id="trie-vis">Root</pre>
+        </div>
+        <div class="card">
+          <h2>BK-Tree Metric Bounds</h2>
+          <pre id="bk-vis">Root</pre>
+        </div>
+      </div>
+    </main>
+
+    <!-- TAB 3: WORKBENCH -->
+    <main id="workbench-tab" class="tab-content">
+      <div class="card">
+        <h2>Add Custom Words to Dictionary</h2>
+        <div class="form-group">
+          <label for="new-word">Word:</label>
+          <input type="text" id="new-word" placeholder="Enter word...">
+        </div>
+        <div class="form-group">
+          <label for="new-freq">Frequency Weight:</label>
+          <input type="number" id="new-freq" value="10" min="1">
+        </div>
+        <button id="add-word-btn">Insert Word</button>
+        <p id="workbench-status" style="margin-top: 12px; font-weight: 500;"></p>
+      </div>
+    </main>
+  </div>
+
+  <!-- OFFLINE JAVASCRIPT MODULES -->
+  <script src="js/trie.js"></script>
+  <script src="js/bktree.js"></script>
+  <script src="js/spellseek.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
