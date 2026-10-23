@@ -1,0 +1,116 @@
+
+# Spellseek test dictionary
+# Format: word frequency
+# Blank lines and lines beginning with # should be ignored.
+
+hello 200
+world 150
+spellseek 100
+spelling 100
+spellchecker 80
+correct 90
+correction 85
+computer 120
+science 110
+student 100
+college 90
+
+program 180
+programs 140
+programmer 160
+programmers 130
+programming 220
+progress 170
+progressive 100
+project 200
+projects 150
+protect 130
+provide 120
+problem 210
+probably 190
+promise 160
+
+receive 180
+believe 170
+relieve 90
+friend 160
+their 200
+there 190
+where 150
+which 180
+quick 130
+brown 110
+fox 80
+jumps 75
+over 140
+lazy 70
+dog 120
+
+apple 180
+apply 170
+applied 120
+applying 100
+application 200
+applications 140
+approach 110
+approve 90
+appropriate 80
+
+cat 150
+bat 120
+hat 100
+rat 90
+mat 80
+book 160
+books 130
+look 150
+took 110
+cook 100
+
+dictionary 220
+frequency 130
+suggestion 140
+suggestions 110
+autocomplete 100
+algorithm 180
+algorithms 140
+structure 160
+structures 120
+trie 90
+tree 150
+distance 110
+search 170
+searching 130
+index 140
+indexes 100
+
+test 200
+testing 180
+tested 120
+tester 90
+sample 140
+example 160
+examples 130
+input 150
+output 140
+result 130
+results 120
+sentence 170
+sentences 120
+word 220
+words 190
+```
+
+**How to use it**
+
+1. Create the `tests` folder in your project root if it doesn't exist.
+2. Create `test_dictionary.txt` inside it and paste the contents above.
+3. Test the Java version with:
+
+```bash
+java Spellseek tests/test_dictionary.txt
+```
+
+4. For the browser version, this file is a separate test fixture. Your existing browser interface loads `dictionary.txt` by default, so it will not automatically load `tests/test_dictionary.txt` unless you modify its loading path.
+
+The test dictionary deliberately contains `receive` and `programming` to help test common spelling mistakes such as `recieve` and `progrmming`. Exact suggestions and rankings depend on your implementation and its search-distance settings.
