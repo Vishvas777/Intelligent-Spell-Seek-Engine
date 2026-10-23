@@ -1,0 +1,10 @@
+# Small deterministic test dictionary
+hello 10
+world 20
+can't 3
+receive 100
+programming 2224
+spelling 50
+selling 4
+hello 15
+bad-word 9
