@@ -8,7 +8,7 @@ The project uses Java for the command-line version and HTML, CSS, and JavaScript
 
 ## 2. Main Data Structures
 
-### BK-Tree
+## BK-Tree
 The BK-tree helps find words that are similar to a misspelled input. It uses edit distance to organize words and avoid comparing every dictionary word unnecessarily.
 
 ### Trie
