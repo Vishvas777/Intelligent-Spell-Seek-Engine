@@ -34,7 +34,7 @@ Spellseek/
 
 Repository documentation and supporting files, such as `README.txt`, `LICENSE`, `CONTRIBUTING.md`, `.gitignore`, and `CHANGELOG.md`, may also be present.
 
-### File responsibilities
+### File responsibilitie
 
 | File | Responsibility |
 |---|---|
